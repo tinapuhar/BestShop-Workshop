@@ -1,0 +1,29 @@
+:root { 
+    --primary-color: #08A6E4;
+    --secondary-color:#fa597d;
+    --accent-color: #55DFB4; 
+    --navigation-text-color:#A5A5A5;
+    --lightest-text-color: #F7F7F7;
+    --hover-text-color: black;
+    --button-text-color: white;
+    --main-font: "Open Sans", sans serif;
+    --secondary-font: "Raleway", sans serif;
+    //*standard spacing, rounding of corners*//
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 1352px;
+    margin: 0 auto;
+}
+
+//*hover and cursor pointer!*//
