@@ -3,24 +3,46 @@
 
 .header {
   min-height: 700px;
-  @include flex-center(column, center, center);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* FIX: Pushes content rows upward away from the bottom graphic */
+  align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 0 20px;
+  padding: 100px 20px 0; /* Adds top padding to position text nicely in the upper white space */
   text-align: center;
   font-family: $secondary-font;
+
+  h1 {
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+    color: $hover-text-color;
+    margin-bottom: 40px; /* Spacing between the subtitle description and button */
+  }
+
+  .btn {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 50px; /* Pushes the button higher up, away from the laptop graphic */
+  }
 
   img {
     position: absolute;
     bottom: 0;
-    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
     max-width: 100%;
     height: auto;
-  }
-
-  &__text {
-    font-size: 16px;
-    color: $hover-text-color;
-    margin-bottom: 30px;
+    pointer-events: none; /* Prevents the image from blocking button clicks */
   }
 }
+

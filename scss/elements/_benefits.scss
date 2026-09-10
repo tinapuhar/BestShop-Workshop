@@ -23,7 +23,7 @@
         margin-right: 117px;
         margin-bottom: 38px;
         
-        ::before {
+        &::before { /* Fixed missing ampersand here to compile cleanly */
           content: "";
           width: 180px;
           height: 180px;
@@ -70,9 +70,9 @@
       }
     }
 
+    /* Row 3 - Left Text Box */
     &--solo {
-      max-width: 620px;
-      flex: 1;
+      flex: 1; /* Force card to scale equally inside the row container */
       --local-accent: #{$accent-color};
 
       .benefits__text {
@@ -81,8 +81,9 @@
       }
     }
 
+    /* Row 3 - Right Trumpet Image Box */
     &--image {
-      flex-grow: 1;
+      flex: 1; /* Force card to scale equally to take up exactly 50% width */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -92,6 +93,7 @@
       img {
         width: 295px;
         height: auto;
+        margin-top: 0; /* Clears any offset pushing the trumpet out of align */
       }
     }
   }
@@ -125,12 +127,15 @@
     }
   }
 
+  /* Parent wrapper holding both components together */
   &__double {
     display: flex;
-    gap: 30px;
+    gap: 30px; /* Space between the text card and green image card */
+    width: 100%;
     
     > div {
-      margin-bottom: 0;
+      margin-bottom: 0; /* Clears default card bottom row boundaries offset */
     }
   }
 }
+

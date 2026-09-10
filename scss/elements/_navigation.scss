@@ -4,6 +4,8 @@
 .nav {
   @include flex-center(row, space-between, center);
   padding: 20px 30px;
+  border-bottom: 1px solid #E8E9ED; 
+  background-color: $color-white;
 
   &__logo {
     font-size: 40px;

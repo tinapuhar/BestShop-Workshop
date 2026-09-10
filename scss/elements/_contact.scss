@@ -11,9 +11,11 @@
     @include flex-center(row, space-between, flex-start);
     padding: 0 50px;
     gap: 100px;
+    width: 100%; /* Ensures the container utilizes maximum layout bounds */
   }
 
-  &__column {
+  /* FIXED: Applied 50% width directly to your left column class name */
+  &__info {
     width: 50%;
   }
 
@@ -22,7 +24,7 @@
     font-family: $secondary-font;
     font-weight: 400;
     color: $hover-text-color;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
   }
 
   &__instruction {
@@ -44,6 +46,7 @@
   font-size: 16px;
   color: $navigation-text-color;
   font-family: $main-font;
+  text-decoration: none; /* Removes link underline decoration lines */
 
   img {
     width: 24px;
@@ -54,6 +57,7 @@
 .form {
   @include flex-center(column, center, stretch);
   gap: 35px;
+  width: 50%; /* FIXED: Applied 50% width directly to your form column layout */
 
   &__field {
     @include flex-center(column, center, stretch);
