@@ -1,0 +1,49 @@
+@import '../settings/variables';
+@import '../settings/mixins';
+
+.section__statistics {
+  @include flex-center(column, center, center);
+}
+
+.statistics {
+  &__header {
+    font-size: 26px;
+    color: $hover-text-color;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  &__icons {
+    @include flex-center(row, center, center);
+    gap: 60px;
+    margin-top: 50px;
+  }
+
+  &__numbers {
+    font-weight: bold;
+    font-size: 16px;
+    color: $hover-text-color;
+  }
+
+  &__text {
+    color: $navigation-text-color;
+  }
+}
+
+.stat_box {
+  @include flex-center(column, center, center);
+  gap: 5px;
+  text-align: center;
+}
+
+.circle_bg_red, .circle_bg_blue, .circle_bg_green {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  @include flex-center(row, center, center);
+}
+
+.circle_bg_red { background-color: $secondary-color; }
+.circle_bg_blue { background-color: $primary-color; }
+.circle_bg_green { background-color: $accent-color; }

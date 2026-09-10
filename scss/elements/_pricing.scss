@@ -1,0 +1,100 @@
+@import '../settings/variables';
+@import '../settings/mixins';
+
+.section__pricing {
+  margin: 0 auto;
+  @include flex-center(column, center, center);
+}
+
+.pricing {
+  &__boxes {
+    @include flex-center(row, center, flex-end);
+    margin-top: 50px;  
+    gap: 30px;
+  }
+
+  &__box {
+    width: 370px;
+    border-radius: 18px;
+    @include flex-center(column, center, center);
+    border: 1px solid var(--local-pricing-accent, #{$accent-color});
+    padding-bottom: 40px;
+    background-color: $color-white;
+
+    .btn {
+      padding: 15px 80px;
+      font-size: 0.8125rem;
+      background-color: var(--local-pricing-accent, #{$accent-color});
+    }
+
+    &--basic {
+      --local-pricing-accent: #{$secondary-color};
+      .pricing__price { margin-bottom: 30px; }
+    }
+
+    &--professional {
+      --local-pricing-accent: #{$primary-color};
+      width: 400px;
+      box-shadow: 5px 1px 27px $color-primary-shadow;
+      .pricing__type { font-size: 1.3125rem; }
+    }
+
+    &--premium {
+      --local-pricing-accent: #{$accent-color};
+    }
+  }
+
+  &__details {
+    margin-top: 34px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__type {
+    font-size: 1.25rem;
+    font-family: $secondary-font;
+    font-weight: 700;
+  }
+
+  &__price {
+    font-size: 2.875rem;
+    font-family: $main-font;
+    font-weight: 300;
+    margin-top: 25px;
+    color: var(--local-pricing-accent, #{$accent-color});
+  }
+
+  &__limited {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.75rem;
+    font-family: $secondary-font;
+    font-weight: 700;
+  }
+
+  &__items {
+    text-align: center;
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    font-size: 14px;
+    margin-bottom: 20px;
+
+    &::before {
+      content: "";
+      width: 11px;
+      height: 11px;
+      display: inline-block;
+      margin-right: 10px;
+      background-image: url("../assets/Checkmark-1.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &--not::before {
+      background-image: url("../assets/Close.svg");
+    }
+  }
+}

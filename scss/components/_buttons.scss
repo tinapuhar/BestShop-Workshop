@@ -1,0 +1,18 @@
+@import '../settings/variables';
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  background-color: $primary-color;
+  color: $button-text-color;
+  font-size: 16px;
+  padding: 20px 130px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  
+  &--primary {
+    background-color: $primary-color;
+  }
+}

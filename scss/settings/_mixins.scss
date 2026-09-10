@@ -1,0 +1,16 @@
+// Flexbox shortcut mixin
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Media Query mixin for responsive layout
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == desktop {
+    @media (max-width: 1352px) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 768px) { @content; }
+  }
+}

@@ -1,0 +1,39 @@
+@import '../settings/variables';
+@import '../settings/mixins';
+
+.nav {
+  @include flex-center(row, space-between, center);
+  padding: 20px 30px;
+
+  &__logo {
+    font-size: 40px;
+    color: $primary-color;
+    font-family: $secondary-font;
+    font-weight: 400;
+  }
+
+  &__links {
+    @include flex-center(row, flex-end, center);
+    gap: 60px;
+    list-style: none;
+  }
+
+  &__item {
+    text-transform: uppercase;
+    font-family: $secondary-font;
+
+    a {
+      color: $navigation-text-color;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-text-color;
+        text-decoration: underline;
+        text-decoration-color: $primary-color;
+        text-underline-offset: 10px;
+        text-decoration-thickness: 4px;
+      }
+    }
+  }
+}

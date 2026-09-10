@@ -1,0 +1,102 @@
+@import '../settings/variables';
+@import '../settings/mixins';
+
+.section--contact {
+  @include flex-center(row, center, center);
+  background-color: $color-white;
+}
+
+.contact {
+  &__container {
+    @include flex-center(row, space-between, flex-start);
+    padding: 0 50px;
+    gap: 100px;
+  }
+
+  &__column {
+    width: 50%;
+  }
+
+  &__title {
+    font-size: 49px;
+    font-family: $secondary-font;
+    font-weight: 400;
+    color: $hover-text-color;
+    margin-bottom: 15px;
+  }
+
+  &__instruction {
+    font-size: 16px;
+    color: $hover-text-color;
+    margin-bottom: 40px;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.details__item {
+  @include flex-center(row, flex-start, center);
+  gap: 15px;
+  font-size: 16px;
+  color: $navigation-text-color;
+  font-family: $main-font;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.form {
+  @include flex-center(column, center, stretch);
+  gap: 35px;
+
+  &__field {
+    @include flex-center(column, center, stretch);
+    gap: 5px;
+  }
+
+  &__label {
+    font-size: 11px;
+    font-family: $secondary-font;
+    text-transform: uppercase;
+    color: $primary-color;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+  }
+
+  &__input {
+    border: none;
+    border-bottom: 1px solid $navigation-text-color;
+    padding: 8px 0;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    width: 100%;
+
+    &:focus {
+      border-bottom-color: $primary-color;
+    }
+  }
+
+  &__checkbox {
+    @include flex-center(row, flex-start, flex-start);
+    gap: 12px;
+  }
+
+  .btn--primary {
+    align-self: flex-end;
+    padding: 15px 60px;
+    border-radius: 50px;
+  }
+}
+
+.consent__text {
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-grey;
+}

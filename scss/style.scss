@@ -1,0 +1,21 @@
+// 1. Settings (Variables, Mixins)
+@import 'settings/variables';
+@import 'settings/mixins';
+
+// 2. Generic (Global Reset & Framework Layout)
+@import 'generic/reset';
+@import 'generic/grid';
+
+// 3. Components (Shared standalone building blocks)
+@import 'components/headings';
+@import 'components/buttons';
+
+// 4. Elements (Core structural pages)
+@import 'elements/base';
+@import 'elements/navigation';
+@import 'elements/header';
+@import 'elements/statistics';
+@import 'elements/benefits';
+@import 'elements/pricing';
+@import 'elements/contact';
+@import 'elements/footer';

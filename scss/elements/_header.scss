@@ -1,0 +1,26 @@
+@import '../settings/variables';
+@import '../settings/mixins';
+
+.header {
+  min-height: 700px;
+  @include flex-center(column, center, center);
+  position: relative;
+  overflow: hidden;
+  padding: 0 20px;
+  text-align: center;
+  font-family: $secondary-font;
+
+  img {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__text {
+    font-size: 16px;
+    color: $hover-text-color;
+    margin-bottom: 30px;
+  }
+}
